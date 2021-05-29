@@ -1,0 +1,1 @@
+Jellyfin has no tracking, phone-home, or central servers collecting your data. We believe in keeping our software open and transparent, and anything we might collect (crash logs, etc.) is opt-in only. We're also not in the media business, so the only media you see is your own.
