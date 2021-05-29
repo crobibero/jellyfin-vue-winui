@@ -1,0 +1,3 @@
+[submodule "jellyfin-vue"]
+	path = jellyfin-vue
+	url = https://github.com/jellyfin/jellyfin-vue.git

@@ -1,4 +1,4 @@
-﻿using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Shapes;
 using System;
 using System.IO;
@@ -21,7 +21,7 @@ namespace Jellyfin.Vue.WinUI
             await WebView.EnsureCoreWebView2Async();
             WebView.CoreWebView2.SetVirtualHostNameToFolderMapping(
                 "jellyfin.winui.local",
-                "Client",
+                "jellyfin-vue",
                 Microsoft.Web.WebView2.Core.CoreWebView2HostResourceAccessKind.Allow);
             WebView.Source = new Uri("http://jellyfin.winui.local/index.html");
 
