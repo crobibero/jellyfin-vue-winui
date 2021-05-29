@@ -1,3 +1,0 @@
-[submodule ".\\Jellyfin.Vue.WinUI\\Jellyfin.Vue.WinUI\\jellyfin-vue"]
-	path = .\\Jellyfin.Vue.WinUI\\Jellyfin.Vue.WinUI\\jellyfin-vue
-	url = git@github.com:jellyfin/jellyfin-vue.git
