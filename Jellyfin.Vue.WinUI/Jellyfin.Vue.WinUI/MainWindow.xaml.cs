@@ -31,12 +31,23 @@ namespace Jellyfin.Vue.WinUI
                 WebView.Source = new Uri("http://jellyfin.winui.local/index.html");
 
                 WebView.CoreWebView2.NavigationStarting += CoreWebView2_NavigationStarting;
+                WebView.CoreWebView2.WebMessageReceived += CoreWebView2_WebMessageReceived;
+
+                /*
+                await WebView.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync("window.chrome.webview.postMessage(window.document.URL);");
+                await WebView.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync("window.chrome.webview.addEventListener(\'message\', event => alert(event.data));");
+                */
             }
             catch(Exception ex)
             {
                 Log.Logger.Error(ex, "Error initializing router");
                 throw;
             }
+        }
+
+        private void CoreWebView2_WebMessageReceived(CoreWebView2 sender, CoreWebView2WebMessageReceivedEventArgs args)
+        {
+            Log.Logger.Information(args.TryGetWebMessageAsString());
         }
 
         private void CoreWebView2_NavigationStarting(CoreWebView2 sender, CoreWebView2NavigationStartingEventArgs args)
